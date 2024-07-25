@@ -1,0 +1,30 @@
+semantic HTML 5 elements like header, nav, main and footer 
+
+Include the logo (logo.jpeg) in the navigation bar and link it to the home page (index.html). 
+The navigation bar should have a search form, but the search functionality is not required.
+
+The main image (main.jpg) should be included as an image element in the main section of the page (home page only). 
+The image should float right and should be displayed as a circle. Use CSS for that. 
+
+All pages should have the same navigation (a nav element) containing a dropdown menu for all four pages 
+(with options appearing as Home, Pets, Add more, and Gallery).
+
+All pages should have a footer with a copyright that has your name.
+
+There should be one common CSS file for all the pages (for common nav and footer styles). You must create a CSS stylesheet that all pages are linked to (in the <head> element).
+
+Use a float for layout rather than absolute positioning. 
+
+The content of the page is 1200px wide and centred. Use margins on the body element to achieve this. 
+
+Use Google fonts for the site. “Ysabeau SC” as a default, 
+“Poetsen One” for all headings except for <h1> on the home page – “Permanent Marker”, 
+and material icons for icons.
+https://fonts.google.com/specimen/Permanent+Marker, https://fonts.google.com/specimen/Ysabeau+SC, https://fonts.google.com/icons, https://fonts.google.com/specimen/Poetsen+One
+
+There should be one common JS file for all pages (for the dropdown menu). 
+This dropdown menu uses a JavaScript onchange event handler to implement navigation. 
+You will need to write a relevant JavaScript function in a separate JavaScript file, linked to from all web pages. 
+You should link the JS file in the <head> or at the end of the <body> to ensure best practices.
+
+
