@@ -4,7 +4,7 @@ body { width:1200px; margin: auto}
 
 span.right {}
 
-img.main {float: right; border-radius: 50%;   margin: auto;
+img.main {float: right; border-radius: 50%;   margin: auto; margin-right: 40px;
     display: block;} /*Make the image float right and circular*/ 
 
 
