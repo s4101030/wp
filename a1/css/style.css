@@ -1,17 +1,85 @@
-body { width:1200px; margin: auto}
-.centertext{text-align: center;}
-.border {border: 3px solid black; padding: 10px; width: 20%; margin: auto; text-align: center;}
+body {
+    width: 1200px;
+    margin: auto
+}
 
-img.main {float: right; border-radius: 50%;   margin: auto; margin-right: 40px;
-    display: block;} /*Make the image float right and circular*/ 
+body.index {
+    background-color: #fcf9ec
+}
 
-div.navdiv {height: 60px; background-color: #008080; border-radius: 0px 0px 15px 15px; vertical-align: middle;}
+.centertext {
+    text-align: center;
+}
 
-h1 {color: #36454F}
-h2 {color: #36454F}
-p {color: #36454F}
+.border {
+    border: 3px solid black;
+    padding: 10px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
 
-img.logo {height:50px; float: left; padding-left: 20px; padding-right: 10px;}
+img.main {
+    height: 410px;
+    float: right;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 40px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/*Make the image float right and circular*/
+
+div.navdiv {
+    height: 60px;
+    background-color: #008080;
+    border-radius: 0px 0px 15px 15px;
+    vertical-align: middle;
+}
+
+h1 {
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1.index {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #E57F3D;
+    font-size: 65px;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2.index {
+    color: #008080;
+    font-size: 55px;
+}
+
+p {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+img.logo {
+    height: 50px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+}
 
 /* footer {margin-top: auto;} */
 footer {
@@ -25,4 +93,4 @@ footer {
     color: black;
     text-align: center;
     border-radius: 15px 15px 0px 0px;
- }
+}
