@@ -11,6 +11,8 @@ body.index {
     text-align: center;
 }
 
+.inputwidth {width: 1190px;}
+
 .border {
     border: 3px solid black;
     padding: 10px;
@@ -18,6 +20,12 @@ body.index {
     margin: auto;
     text-align: center;
 }
+
+.center {
+    margin: auto;
+    width: 120px;
+    padding: 10px;
+  }
 
 img.main {
     height: 410px;
