@@ -7,22 +7,77 @@ Mattea Fotheringham 26/07/24
 <html lang="en">
 
 <head>
-    <title>[TITLE]]</title>
+    <title>Add Pets</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav>
+        <div class="navdiv">
+            <!-- Nav & Header rearranged & header used as the main content title under teacher consult -->
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <select name="navigation" id="navigation">
+                <option value="" selected disabled hidden>Select an option...</option>
+                <option value="home">Home</option>
+                <option value="pets">Pets</option>
+                <option value="add">Add more</option>
+                <option value="gallery">Gallery</option>
+            </select> <input style="margin-left: 760px;" type="text" value="Search" class="right">
+            <img src="images/search.png" alt="Search icon" style="height: 15px; margin-top: 20px;">
+        </div>
     </nav>
 
     <header>
+        <h2>Add a pet</h1>
     </header>
 
     <main>
+        <p>You can add a new pet here</p>
+
+        <label for="name">Pet Name:</label><br>
+        <input type="text" id="name" name="name" value="Provide a name for the pet"><br>
+
+        <label for="type">Type:</label><br>
+        <select name="type" id="type">
+            <option value="" selected disabled hidden>--Choose an option--</option>
+            <option value="home">Home</option>
+            <option value="pets">Pets</option>
+            <option value="add">Add more</option>
+            <option value="gallery">Gallery</option>
+        </select><br>
+        
+        <label for="description">Description</label><br>
+        <textarea id="description" name="description" value="Describe the pet briefly"></textarea><br>
+        
+        <label for="img">Select an Image:</label>
+        <input type="file" id="img" name="img" accept="image/*"><br>
+
+        <label for="caption">Image Caption:</label><br>
+        <input type="text" id="caption" name="caption" value="Describe the image in one word"><br>
+
+        <label for="ageMonths">Age (months):</label><br>
+        <input type="number" id="ageMonths" name="ageMonths" value="Age of a pet in months"><br>
+
+        <label for="location">Location:</label><br>
+        <input type="text" id="location" name="location" value="Location of the pet"><br><br>
+
+        <input type="submit" value="Submit"><input type="reset" value="Reset">
+
     </main>
     
     <footer>
+        <p>Copywrite Mattea Fotheringham (s4101030). All Rights Reserved | Designed for Pets Victoria</p>
     </footer>
 </body>
 

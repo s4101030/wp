@@ -73,6 +73,12 @@ p {
     font-optical-sizing: auto;
     font-style: normal;
 }
+label {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 img.logo {
     height: 50px;
@@ -90,7 +96,10 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #E57F3D;
-    color: black;
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     text-align: center;
     border-radius: 15px 15px 0px 0px;
 }
