@@ -11,7 +11,7 @@ body.index {
     text-align: center;
 }
 
-.inputwidth {width: 1190px;}
+.inputwidth {width: 1175px;}
 
 .border {
     border: 3px solid black;
@@ -36,6 +36,28 @@ img.main {
     display: block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+
+img.pets {
+    height: 410px;
+    float: left;
+    margin: auto;
+    margin-right: 60px;
+}
+
+
+th {
+    background-color:#fcf9ec;
+    color: #008080;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+tr {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /*Make the image float right and circular*/
@@ -81,6 +103,8 @@ p {
     font-optical-sizing: auto;
     font-style: normal;
 }
+p.petsHeader {font-weight: bold;}
+
 label {
     color: #36454F;
     font-family: "Ysabeau SC", sans-serif;
