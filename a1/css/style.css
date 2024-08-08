@@ -39,19 +39,25 @@ img.main {
 }
 
 img.pets {
-    height: 410px;
+    height: 280px;
     float: left;
     margin: auto;
     margin-right: 60px;
 }
 
-
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 550px;
+    float: right;
+  }
 th {
     background-color:#fcf9ec;
     color: #008080;
     font-family: "Ysabeau SC", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    text-align: left;
 }
 tr {
     color: #36454F;
