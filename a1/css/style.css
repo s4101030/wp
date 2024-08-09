@@ -157,6 +157,15 @@ p {
     font-style: normal;
 }
 
+span.maxsizewarn {
+    color: red;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-style:italic;
+    font-weight: bold;
+    font-size: 10px;
+}
+
 label {
     color: #36454F;
     font-family: "Ysabeau SC", sans-serif;
