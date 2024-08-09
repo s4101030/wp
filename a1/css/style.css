@@ -25,7 +25,7 @@ body.index {
 
 .center {
     margin: auto;
-    width: 120px;
+    width: 350px;
     padding: 10px;
 }
 
@@ -195,5 +195,35 @@ div.footerspacerpets {
     margin-top: 326px;
 }
 div.footerspaceradd {
-    margin-top: 56px;
+    margin-top: 36px;
+}
+
+input[type=submit] {
+border:#008080;
+background-color:#008080;
+border-style: solid;
+border-radius: 40px;
+background-color: 008080;
+text-decoration: none;
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 50px;
+padding-right: 50px;
+margin-right: 40px;
+}
+
+input[type=reset] {
+border-left-color: #008080;
+border-top-color: #008080;
+border-bottom-color: #36454F;
+border-right-color: #36454F;
+border-style: solid;
+border-radius: 40px;
+background-color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 50px;
+padding-right: 50px;
 }
