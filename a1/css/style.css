@@ -17,6 +17,10 @@ main {
     flex-grow: 1;
 }
 
+main.index {
+    clear: right;
+}
+
 header,
 main,
 footer {
@@ -207,6 +211,7 @@ footer {
     /* bottom: 0; */
     margin: auto;
     width: 1200px;
+    clear: both;
     padding-top: 18px;
     padding-bottom: 18px;
     background-color: #E57F3D;
@@ -216,18 +221,6 @@ footer {
     font-style: normal;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
-}
-
-div.footerspacerindex {
-    margin-top: 168px;
-}
-
-div.footerspacerpets {
-    margin-top: 326px;
-}
-
-div.footerspaceradd {
-    margin-top: 36px;
 }
 
 .submit {
