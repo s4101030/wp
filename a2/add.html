@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+Week 2 - Assessment 1
+Mattea Fotheringham 26/07/24
+-->
+
+<html lang="en">
+
+<head>
+    <title>Add More</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navdiv">
+            <!-- Nav & Header rearranged & header used as the main content title under teacher consult -->
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <select name="navigation" id="navigation" onchange="dropdownDirect()">
+                <option value="" selected disabled hidden>Select an option...</option>
+                <option value="home">Home</option>
+                <option value="pets">Pets</option>
+                <option value="add">Add more</option>
+                <option value="gallery">Gallery</option>
+            </select> <input class="seperation right" type="text" placeholder="Search">
+            <span class="material-symbols-outlined topmargin10 white marginleft">
+                search
+            </span>
+        </div>
+    </nav>
+
+    <header>
+        <h3 class="centertext">Add a pet</h3>
+    </header>
+
+    <main>
+        <p class="centertext">You can add a new pet here</p>
+
+        <form>
+            <div class="tooltip"><label for="name">Pet Name:</label>
+                <span class="tooltiptext">Enter pet name</span>
+            </div> <br>
+            <input type="text" id="name" name="name" placeholder="Provide a name for the pet" class="inputwidth"><br>
+
+            <div class="tooltip"><label for="type">Type:</label>
+                <span class="tooltiptext">Select type from list</span>
+            </div><br>
+            <select name="type" id="type" class="inputwidth">
+                <option value="" selected disabled hidden>--Choose an option--</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="butterfly">Butterfly</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <div class="tooltip"><label for="description">Description</label>
+                <span class="tooltiptext">Enter a description of the pet</span>
+            </div><br>
+            <textarea id="description" name="description" class="inputwidth"
+                placeholder="Describe the pet briefly"></textarea><br>
+
+                <div class="tooltip"><label for="img">Select an Image:</label>
+                    <span class="tooltiptext">Select an image of the pet</span>
+                </div>
+            <input type="file" id="img" name="img" accept="image/*"><span class="maxsizewarn">Max image size:
+                500px</span><br>
+
+            <div class="tooltip"><label for="caption">Image Caption:</label>
+                <span class="tooltiptext">Enter a caption for the uploaded image</span>
+            </div><br>
+            <input type="text" id="caption" name="caption" placeholder="Describe the image in one word"
+                class="inputwidth"><br>
+
+            <div class="tooltip"><label for="ageMonths">Age (months):</label>
+                <span class="tooltiptext">Enter the age of the pet in months</span>
+            </div><br>
+            <input type="number" id="ageMonths" name="ageMonths" placeholder="Age of a pet in months"
+                class="inputwidth"><br>
+
+            <div class="tooltip"><label for="location">Location:</label>
+                <span class="tooltiptext">Enter the location of the pet</span>
+            </div><br>
+            <input type="text" id="location" name="location" placeholder="Location of the pet"
+                class="inputwidth"><br><br>
+
+            <div class="center">
+                <span class="submit topmargin10">
+                    <span class="material-symbols-outlined white topmargin10 font14">
+                        add_task
+                    </span>
+                    submit
+                    <!-- <input type="submit" value="submit"> -->
+                </span>
+
+                <span class="reset topmargin10">
+                    <span class="material-symbols-outlined blue topmargin10 font14">
+                        close
+                    </span>
+                    clear
+                    <!-- <input type="reset" value="clear"> -->
+                </span>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Copywrite Mattea Fotheringham (s4101030). All Rights Reserved | Designed for Pets Victoria</p>
+    </footer>
+</body>
+
+</html>

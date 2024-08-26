@@ -1,0 +1,367 @@
+/* If you are reading this I can only apologise for what you're about to see, this is my first time using CSS */
+
+body {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main.index {
+    clear: right;
+}
+
+header,
+main,
+footer {
+    flex-shrink: 0;
+}
+
+body.index {
+    background-color: #fcf9ec
+}
+
+.centertext {
+    text-align: center;
+}
+
+.inputwidth {
+    width: 1175px;
+}
+
+.border {
+    border: 3px solid black;
+    padding: 10px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 400px;
+    padding: 10px;
+}
+
+img.main {
+    height: 410px;
+    float: right;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 40px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+img.pets {
+    height: 280px;
+    float: left;
+    margin: auto;
+    margin-right: 60px;
+}
+
+img.gallery {
+    height: 130px;
+    margin: auto;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+table.pets {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 550px;
+    float: right;
+}
+
+table.gallery {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: #fcf9ec;
+    color: #008080;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;
+    text-align: left;
+}
+
+tr {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;
+}
+
+/*Make the image float right and circular*/
+
+div.navdiv {
+    height: 60px;
+    background-color: #008080;
+    border-radius: 0px 0px 15px 15px;
+    vertical-align: middle;
+}
+
+div.gallerydiv {
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: unset;
+    font-size: 12px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+div.galleryspacer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1.index {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #E57F3D;
+    font-size: 65px;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2.index {
+    color: #008080;
+    font-size: 55px;
+}
+
+h3 {
+    color: #36454F;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: unset;
+    margin-bottom: 0px;
+}
+
+p {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;
+}
+
+span.maxsizewarn {
+    color: red;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+label {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;
+}
+
+img.logo {
+    height: 50px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* footer {margin-top: auto;} */
+footer {
+    /* position: fixed; */
+    /* bottom: 0; */
+    margin: auto;
+    width: 1200px;
+    clear: both;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #E57F3D;
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.submit {
+    border: #008080;
+    background-color: #008080;
+    border-style: solid;
+    border-radius: 40px;
+    background-color: #008080;
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 40px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.reset {
+    border-left-color: #008080;
+    border-top-color: #008080;
+    border-bottom-color: #36454F;
+    border-right-color: #36454F;
+    border-style: solid;
+    border-radius: 40px;
+    background-color: white;
+    color: #008080;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+    font-size: 20px;
+}
+
+.marginleft {margin-left: 5px;}
+
+.white {
+    color: white;
+}
+
+.grey {
+    color: #36454F;
+}
+
+.blue {
+    color: #008080
+}
+
+.topmargin10 {
+    margin-top: 10px;
+}
+
+.font14 {
+    font-size: 14px
+}
+
+input.seperation {
+    margin-left: 760px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    color: #36454F;
+    font-family: "Ysabeau SC", sans-serif;
+    font-style: normal;    
+    text-decoration: underline;
+    font-size: 12px;
+    padding: 16px 32px;
+  }
+  /* https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-style: normal; 
+    font-size: 12px;   
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 100%;
+    margin-left: -60px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* https://www.w3schools.com/css/css_tooltip.asp */
