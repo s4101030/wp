@@ -1,54 +1,17 @@
 <!DOCTYPE HTML>
 <!--
-Week 2 - Assessment 1
-Mattea Fotheringham 26/07/24
+Week 7 - Assessment 2
+Mattea Fotheringham 28/08/24
 -->
 
-<html lang="en">
-
-<head>
-    <title>Add More</title>
-
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC:wght@1..1000&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js"></script>
-</head>
+<?php
+$title = "Add More";
+require("include/header.inc"); ?>
 
 <body>
-    <nav>
-        <div class="navdiv">
-            <!-- Nav & Header rearranged & header used as the main content title under teacher consult -->
-            <img src="images/logo.png" alt="Logo" class="logo">
-            <select name="navigation" id="navigation" onchange="dropdownDirect()">
-                <option value="" selected disabled hidden>Select an option...</option>
-                <option value="home">Home</option>
-                <option value="pets">Pets</option>
-                <option value="add">Add more</option>
-                <option value="gallery">Gallery</option>
-            </select> <input class="seperation right" type="text" placeholder="Search">
-            <span class="material-symbols-outlined topmargin10 white marginleft">
-                search
-            </span>
-        </div>
-    </nav>
+    <?php
+    require("include/nav.inc");
+    ?>
 
     <header>
         <h3 class="centertext">Add a pet</h3>
@@ -80,9 +43,9 @@ Mattea Fotheringham 26/07/24
             <textarea id="description" name="description" class="inputwidth"
                 placeholder="Describe the pet briefly"></textarea><br>
 
-                <div class="tooltip"><label for="img">Select an Image:</label>
-                    <span class="tooltiptext">Select an image of the pet</span>
-                </div>
+            <div class="tooltip"><label for="img">Select an Image:</label>
+                <span class="tooltiptext">Select an image of the pet</span>
+            </div>
             <input type="file" id="img" name="img" accept="image/*"><span class="maxsizewarn">Max image size:
                 500px</span><br>
 
@@ -125,9 +88,9 @@ Mattea Fotheringham 26/07/24
 
     </main>
 
-    <footer>
-        <p>Copywrite Mattea Fotheringham (s4101030). All Rights Reserved | Designed for Pets Victoria</p>
-    </footer>
+    <?php
+    require("include/footer.inc");
+    ?>
 </body>
 
 </html>

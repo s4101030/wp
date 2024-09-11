@@ -2,15 +2,15 @@ function dropdownDirect() {
     const selectedValue = document.getElementById("navigation").value;
 
     if (selectedValue == "home"){
-        window.location.href = './index.html';
+        window.location.href = './index.php';
     }
     else if (selectedValue == "pets"){
-        window.location.href = './pets.html';
+        window.location.href = './pets.php';
     }    
     else if (selectedValue == "add"){
-        window.location.href = './add.html';
+        window.location.href = './add.php';
     }    
     else if (selectedValue == "gallery"){
-        window.location.href = './gallery.html';
+        window.location.href = './gallery.php';
     }
 }
