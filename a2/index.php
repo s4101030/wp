@@ -6,7 +6,8 @@ Mattea Fotheringham 28/08/24
 
 <?php
 $title = "home";
-require("include/header.inc"); ?>
+require("include/header.inc"); 
+require("include/db_connect.inc"); // placed here to show connection issues on launch ?>
 
 <body class="index">
     <?php

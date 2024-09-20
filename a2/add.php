@@ -6,7 +6,9 @@ Mattea Fotheringham 28/08/24
 
 <?php
 $title = "Add More";
-require("include/header.inc"); ?>
+require("include/header.inc"); 
+require("include/db_connect.inc");
+ ?>
 
 <body>
     <?php

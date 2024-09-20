@@ -5,13 +5,13 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "wp";
+    $dbname = "mysql";
 }
 else {
     $servername = "talsprddb02.int.its.rmit.edu.au";
     $username = "s4101030";
     $password = "s19q17l12";
-    $dbname = $username;
+    $dbname = "s4101030";
 }
 
 // Create connection

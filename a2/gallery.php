@@ -11,6 +11,7 @@ require("include/header.inc"); ?>
 <body>
     <?php
     require("include/nav.inc");
+    require("include/db_connect.inc");
     ?>
 
     <header>
