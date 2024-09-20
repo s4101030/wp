@@ -22,7 +22,7 @@ require("include/db_connect.inc");
     <main>
         <p class="centertext">You can add a new pet here</p>
 
-        <form>
+        <form name="petinput" action=formlanding.php method="POST">
             <div class="tooltip"><label for="name">Pet Name:</label>
                 <span class="tooltiptext">Enter pet name</span>
             </div> <br>
@@ -70,16 +70,17 @@ require("include/db_connect.inc");
                 class="inputwidth"><br><br>
 
             <div class="center">
-                <span class="submit topmargin10">
-                    <span class="material-symbols-outlined white topmargin10 font14">
+
+                <span class="submit topmargin10 pointer" onclick="petinput.submit()">
+                    <span class="material-symbols-outlined white topmargin10 font14 pointer">
                         add_task
                     </span>
                     submit
                     <!-- <input type="submit" value="submit"> -->
                 </span>
 
-                <span class="reset topmargin10">
-                    <span class="material-symbols-outlined blue topmargin10 font14">
+                <span class="reset topmargin10 pointer" onclick="petinput.reset()">
+                    <span class="material-symbols-outlined blue topmargin10 font14 pointer">
                         close
                     </span>
                     clear
