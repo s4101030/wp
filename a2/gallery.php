@@ -26,91 +26,58 @@ require("include/header.inc"); ?>
             still have big, hairy work to do.</p>
 
         <table class="gallery">
-            <tr>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/cat1.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Milo</div>
-                    </div>
-                </td>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/dog1.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Baxter</div>
-                    </div>
-                </td>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/cat2.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Luna</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/dog2.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Willow</div>
-                    </div>
-                </td>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/cat4.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Oliver</div>
-                    </div>
-                </td>
-                <td>
-                    <div class="gallerydiv">
-                        <div class="container">
-                            <img class="gallery image" src="images/dog3.jpeg" alt="">
-                            <div class="middle">
-                                <div class="text"><span class="material-symbols-outlined topmargin10 grey">
-                                        search
-                                    </span><br>Discover_more</div>
-                            </div>
-                        </div>
-                        <div class="galleryspacer">Bella</div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+            <?php
+                // get row in table
+                // modulus 3
+                // subtract modulus from total
+                // total is number of full rows
+                // modulus must be one or two
+                // therefore if there is a modulus there must be a minimum of one, and an if for the two
+                
+                $table = mysqli_query($conn, "select * from pets");
+                
+                $totalrows = mysqli_num_rows($table);
+                $remainder = $totalrows % 3;
+                $fullrows = $totalrows - $remainder;
 
-        <!-- IMAGES HERE -->
+                $num = 0;
+                $closed = true;
+                while ($row = mysqli_fetch_array($table)) {
+                    
+                    $num++;
+                    if ($closed) {
+                        print "<tr>";
+                        $closed = false;
+                    }
+
+                    // if ($fullrows < $num+1){}   
+                    $image = $row['image'];
+                    $name = $row['petname'];
+
+                    print <<<AAA
+                        <td>
+                            <div class="gallerydiv">
+                                <div class="container">
+                                    <img class="gallery image" src="images/$image" alt="">
+                                    <div class="middle">
+                                        <div class="text"><span class="material-symbols-outlined topmargin10 grey">
+                                                search
+                                            </span><br>Discover_more</div>
+                                    </div>
+                                </div>
+                                <div class="galleryspacer">$name</div>
+                            </div>
+                        </td>
+                    AAA;
+                    
+
+                    if ($num % 3 == 0 || $num == $totalrows) {
+                        print "</tr>";
+                        $closed = true;
+                    }
+                }
+            ?>
+        </table>
     </main>
 
     <?php

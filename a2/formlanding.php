@@ -27,6 +27,7 @@ require("include/db_connect.inc");
 
                 // print_r($_POST);
                 // $table = mysqli_query($conn, "select * from pets");
+                // print_r(mysqli_fetch_array($table));
 
                 foreach($_POST as $key => $value) {
 
@@ -35,11 +36,17 @@ require("include/db_connect.inc");
                     }
                 }
                 //other checks here
-                $table = mysqli_query($conn, "select image from pets");
-                while ($row = mysqli_fetch_array($table)) {
-                    if ($row['petname'] == $_POST['img']) {
-                        array_push($issues, "Image filename already exists on server, rename or choose another image");
-                        break;
+                $table = mysqli_query($conn, "select * from pets");
+
+                if (count($_FILES) != 1) {
+                    array_push($issues,"Image not uploaded");
+                } else {
+                    // print $_FILES['img']['name'];
+                    while ($row = mysqli_fetch_array($table)) {
+                        if ($row['petname'] == $_FILES['img']['name']) {
+                            array_push($issues, "Image filename already exists on server, rename or choose another image");
+                            break;
+                        }
                     }
                 }
 
@@ -52,11 +59,13 @@ require("include/db_connect.inc");
                 }
                 else {
                     // when there are no issues
-                    $sql = "INSERT INTO country (petname,description,image,caption,age,location,type) VALUES(?, ?, ?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO pets (petname,description,image,caption,age,location,type) VALUES(?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($sql);
                    
-                    $stmt->bind_param("ssssiss",$_POST['name'],$_POST['description'],$_POST['img'], $_POST['caption'], $_POST['ageMonths'], $_POST['location']);
+                    $stmt->bind_param("ssssiss",$_POST['name'],$_POST['description'],$_FILES['img']['name'], $_POST['caption'], $_POST['ageMonths'], $_POST['location'], $_POST['type']);
                     $stmt->execute();
+
+                    // print_r($_FILES);
 
                     if ($stmt->affected_rows > 0) {
                         move_uploaded_file($_FILES['img']['tmp_name'], 'images/'.$_FILES['img']['name']);
@@ -65,7 +74,7 @@ require("include/db_connect.inc");
 
                 }
             ?>
-            <br><br><br><a href="javascript:history.go(-1)">Return to form</a>
+                <br><br><br><a href="javascript:history.go(-1)">Return to form</a>
             </p>
         </div>
     </main>

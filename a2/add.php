@@ -22,7 +22,7 @@ require("include/db_connect.inc");
     <main>
         <p class="centertext">You can add a new pet here</p>
 
-        <form name="petinput" action=formlanding.php method="POST">
+        <form name="petinput" action=formlanding.php method="POST" enctype="multipart/form-data">
             <div class="tooltip"><label for="name">Pet Name:</label>
                 <span class="tooltiptext">Enter pet name</span>
             </div> <br>
@@ -48,7 +48,7 @@ require("include/db_connect.inc");
             <div class="tooltip"><label for="img">Select an Image:</label>
                 <span class="tooltiptext">Select an image of the pet</span>
             </div>
-            <input type="file" id="img" name="img" accept="image/*"><span class="maxsizewarn">Max image size:
+            <input type="file" id="img" name="img" accept="image/*" enctype="multipart/form-data"><span class="maxsizewarn">Max image size:
                 500px</span><br>
 
             <div class="tooltip"><label for="caption">Image Caption:</label>
