@@ -53,6 +53,8 @@ require("include/header.inc"); ?>
                     // if ($fullrows < $num+1){}   
                     $image = $row['image'];
                     $name = $row['petname'];
+                    $id = $row['petid'];
+                    
 
                     print <<<AAA
                         <td>
@@ -62,7 +64,7 @@ require("include/header.inc"); ?>
                                     <div class="middle">
                                         <div class="text"><span class="material-symbols-outlined topmargin10 grey">
                                                 search
-                                            </span><br>Discover_more</div>
+                                            </span><br><u><a href="./details.php?id=$id">Discover_more</a></u></div>
                                     </div>
                                 </div>
                                 <div class="galleryspacer">$name</div>

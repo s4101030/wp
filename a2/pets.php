@@ -41,8 +41,9 @@ require("include/db_connect.inc") ?>
             <?php
             $table = mysqli_query($conn, "select * from pets");
             while ($row = mysqli_fetch_array($table)) {
+                $id = $row['petid'];
                 print "<tr>";
-                print  "<td>" . $row['petname'] . "</td>";
+                print  "<td><u><a href=\"./details.php?id=$id\">" . $row['petname'] . "</a></u></td>";
                 print  "<td>" . $row['type'] . "</td>";
                 print  "<td>" . $row['age'] . " Months</td>";
                 print  "<td>" . $row['location'] . "</td>";
