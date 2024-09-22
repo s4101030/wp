@@ -16,8 +16,8 @@ require("include/db_connect.inc");
     ?>
 
 <?php
-    // print $_GET['id'];
-    $table = mysqli_query($conn, "select * from pets WHERE petid=1");
+    $id = $_GET['id'];
+    $table = mysqli_query($conn, "select * from pets WHERE petid=$id");
     $age;
     $name;
     $type;
@@ -46,24 +46,26 @@ justify-content: center;
 align-items: center;">
 
             <br>
-            <div class="detailsspacer">
+            <div class="centertext detail">
                 <span class="material-symbols-outlined grey font30">alarm</span>
                 <?php
-                 print "<p class=\"topmargin5\">$age</p>"
+                 print "<p class=\"topmargin5\">$age months</p>"
                 ?>
             </div>
-            <div class="detailsspacer">
+
+            <div class="centertext detail">
                 <span class="material-symbols-outlined grey font30">pets</span>
                 <?php
                  print "<p class=\"topmargin5\">$type</p>"
                 ?>
             </div>
-            <div class="detailsspacer">
+            <div class="centertext detail">
                 <span class="material-symbols-outlined grey font30">location_on</span>
                 <?php
                  print "<p class=\"topmargin5\">$location</p>"
                 ?>
             </div>
+            </table>
         </div>
     </header>
 
