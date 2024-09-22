@@ -267,8 +267,7 @@ footer {
         'wght' 400,
         'GRAD' 0,
         'opsz' 20;
-    font-size: 20px;
-}
+    }
 
 .marginleft {
     margin-left: 5px;
@@ -290,9 +289,19 @@ footer {
     margin-top: 10px;
 }
 
+.topmargin5 {
+    margin-top: 5px;
+}
+
+.detailsspacer {
+    margin-right: 150px; margin-left: 150px;
+}
+
 .font14 {
     font-size: 14px
 }
+.font30 { font-size: 30px;}
+
 
 input.seperation {
     margin-left: 760px;
@@ -373,3 +382,7 @@ input.seperation {
 }
 
 /* https://www.w3schools.com/css/css_tooltip.asp */
+
+.detailimage {
+    height: 240px; margin-top: 40px; margin-bottom: 20px;
+}

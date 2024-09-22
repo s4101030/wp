@@ -5,7 +5,7 @@ Mattea Fotheringham 20/09/24
 -->
 
 <?php
-$title = "Add More";
+$title = "Landing";
 require("include/header.inc"); 
 require("include/db_connect.inc");
  ?>
@@ -16,11 +16,11 @@ require("include/db_connect.inc");
     ?>
 
     <header>
-        <h3 class="centertext">Add a pet</h3>
+        <h3 class="centertext">Landing</h3>
     </header>
 
     <main>
-        <div class="center">
+        <div class="center centertext">
             <p><br><br>
                 <?php
             $issues = array();
