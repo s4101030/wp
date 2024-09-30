@@ -22,7 +22,7 @@ require("include/db_connect.inc");
     <main>
         <p class="centertext">You can add a new pet here</p>
 
-        <form name="petinput" action=formlanding.php method="POST" enctype="multipart/form-data">
+        <form name="petinput" action=formlanding.php method="POST">
             <div class="tooltip"><label for="name">Pet Name:</label>
                 <span class="tooltiptext">Enter pet name</span>
             </div> <br>
