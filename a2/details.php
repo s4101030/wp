@@ -36,7 +36,7 @@ require("include/db_connect.inc");
     <header>
         <div class="centercontent">
             <?php
-            print "<img src=\"images/$image\" class=\"detailimage\">";
+            print "<img alt=\"Image of the pet\" src=\"images/$image\" class=\"detailimage\">";
             ?>
         </div>
         <div class="centercontent">
@@ -61,7 +61,6 @@ require("include/db_connect.inc");
                  print "<p class=\"topmargin5\">$location</p>"
                 ?>
             </div>
-            </table>
         </div>
     </header>
 
