@@ -395,3 +395,9 @@ input.seperation {
 .detailimage {
     height: 240px; margin-top: 40px; margin-bottom: 20px;
 }
+
+.centercontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

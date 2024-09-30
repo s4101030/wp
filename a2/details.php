@@ -34,16 +34,12 @@ require("include/db_connect.inc");
 ?>
 
     <header>
-        <div style="display: flex;
-justify-content: center;
-align-items: center;">
+        <div class="centercontent">
             <?php
             print "<img src=\"images/$image\" class=\"detailimage\">";
             ?>
         </div>
-        <div style="display: flex;
-justify-content: center;
-align-items: center;">
+        <div class="centercontent">
 
             <br>
             <div class="centertext detail">
