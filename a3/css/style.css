@@ -55,15 +55,30 @@ body.index {
     padding: 10px;
 }
 
-img.main {
-    height: 410px;
-    float: right;
-    border-radius: 50%;
+.carouselWidth {
+    width: 400px;
+    float: left;
+    /* margin-top: 40px; */
+    margin-left: 100px;
+    margin-right: 80px;
+  }
+ 
+  .carousel > .carousel-inner > .carousel-item > img{
+    /* width:240px; */
+    /* height:200px; */
+    height: 100%;
+}
+  
+.frontimage {
+    height: 300px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* border-radius: 50%;
     margin: auto;
     margin-right: 40px;
     display: block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 img.pets {
@@ -160,7 +175,7 @@ h1.index {
     font-style: normal;
     color: #E57F3D;
     font-size: 65px;
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 h2 {
@@ -313,7 +328,7 @@ footer {
 
 
 input.seperation {
-    margin-left: 760px;
+    margin-left: 720px;
 }
 
 .container {
