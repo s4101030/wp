@@ -178,6 +178,7 @@ div.gallerydiv {
     font-style: unset;
     font-size: 12px;
     border-radius: 15px 15px 15px 15px;
+    width: 220px;
 }
 
 div.galleryspacer {
@@ -362,6 +363,7 @@ input.seperation {
     position: relative;
     width: 50%;
     margin-left: 0px;
+    padding: 0px;
 }
 
 .image {
