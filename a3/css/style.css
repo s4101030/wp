@@ -1,8 +1,10 @@
 /* If you are reading this I can only apologise for what you're about to see, this is my first time using CSS */
 
 body {
-    width: 1200px;
+    /* width: 1200px; */
     margin: auto;
+    margin-left: 12.335px;
+    margin-right: 12.335px;
     height: 100%;
     min-height: 100%;
     display: flex;
@@ -61,15 +63,15 @@ body.index {
     /* margin-top: 40px; */
     margin-left: 100px;
     margin-right: 80px;
-  }
- 
-  .carousel > .carousel-inner > .carousel-item > img{
+}
+
+.carousel>.carousel-inner>.carousel-item>img {
     /* width:240px; */
     /* height:200px; */
     height: 100%;
     max-height: 500px;
 }
-  
+
 .frontimage {
     height: 300px;
     float: left;
@@ -109,6 +111,7 @@ table.gallery {
     margin-left: auto;
     margin-right: auto;
 }
+
 div.detail {
     width: 300px;
 }
@@ -116,8 +119,27 @@ div.detail {
 /* td {    border: 1px solid;
 } */
 
-a {  color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */}
+a {
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: inherit;
+    /* no underline */
+}
+
+a.normal {
+    font-family: "Ysabeau SC", sans-serif;
+    color: #71b1b1;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+a.selected {
+    font-family: "Ysabeau SC", sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
 
 th {
     background-color: #fcf9ec;
@@ -292,7 +314,7 @@ footer {
         'wght' 400,
         'GRAD' 0,
         'opsz' 20;
-    }
+}
 
 .marginleft {
     margin-left: 5px;
@@ -319,17 +341,21 @@ footer {
 }
 
 .detailsspacer {
-    margin-right: 150px; margin-left: 150px;
+    margin-right: 150px;
+    margin-left: 150px;
 }
 
 .font14 {
     font-size: 14px
 }
-.font30 { font-size: 30px;}
+
+.font30 {
+    font-size: 30px;
+}
 
 
 input.seperation {
-    margin-left: 720px;
+    margin-left: 530px;
 }
 
 .container {
@@ -410,7 +436,9 @@ input.seperation {
 /* https://www.w3schools.com/css/css_tooltip.asp */
 
 .detailimage {
-    height: 240px; margin-top: 40px; margin-bottom: 20px;
+    height: 240px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .centercontent {
