@@ -43,6 +43,16 @@ body.index {
     width: 1175px;
 }
 
+div.register {
+    width: 200px;    
+    margin: auto;
+
+}
+
+.registerwidth {
+    width: 200px;
+}
+
 .border {
     border: 3px solid black;
     padding: 10px;
@@ -163,6 +173,33 @@ div.navdiv {
     border-radius: 0px 0px 15px 15px;
     vertical-align: middle;
 }
+
+p.msg {
+    margin-left: 50px;
+    display:inline-block;
+    margin-right: 950px;
+}
+
+.inline {
+    float: right;
+    margin-top: 13px;
+    margin-right: 12px;
+}
+.inlineSearch {
+    float: right;
+    margin-right: 20px;
+}
+
+div.msg {
+    height: 40px;
+    line-height: 40px;
+    background-color: #d1e7de;
+    border-radius: 15px 15px 15px 15px;
+    vertical-align: middle;
+}
+
+.vert10 {    display: inline-block;
+margin-top: 15px;}
 
 div.gallerydiv {
     text-align: center;

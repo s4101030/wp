@@ -59,10 +59,10 @@ require("include/db_connect.inc");
                 }
                 else {
                     // when there are no issues
-                    $sql = "INSERT INTO pets (petname,description,image,caption,age,location,type) VALUES(?, ?, ?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO pets (petname,description,image,caption,age,location,type,username) VALUES(?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($sql);
                    
-                    $stmt->bind_param("ssssiss",$_POST['name'],$_POST['description'],$_FILES['img']['name'], $_POST['caption'], $_POST['ageMonths'], $_POST['location'], $_POST['type']);
+                    $stmt->bind_param("ssssisss",$_POST['name'],$_POST['description'],$_FILES['img']['name'], $_POST['caption'], $_POST['ageMonths'], $_POST['location'], $_POST['type'],$_SESSION['username']);
                     $stmt->execute();
 
                     // print_r($_FILES);

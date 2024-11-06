@@ -10,6 +10,7 @@
             <option value="add">Add more</option>
             <option value="gallery">Gallery</option>
         </select>  -->
+        <span class="vert10">
         
 <?php
 $navElementsCommon = array(
@@ -26,6 +27,7 @@ $navElementsLoggedIn = array(
     "Logout"=>"logout.php"
 );
 
+    session_start();
     if(isset($_SESSION['loginCheck'])) {
         $navElements = array_merge($navElementsCommon, $navElementsLoggedIn);
     }
@@ -43,11 +45,25 @@ $navElementsLoggedIn = array(
         
         print "<a href=\"$value\" class=\"$style\">$key</a>";
     }
-
-?>
-        <input class="seperation right" type="text" placeholder="Search">
+?>   
+    </span>   
+        <div class="inlineSearch">
+        <input class="right" type="text" placeholder="Search">
         <span class="material-symbols-outlined topmargin10 white marginleft">
             search
         </span>
+        </div>
     </div>
+
+    <?php
+        if (isset($_SESSION['usrmsg'])) {
+            $message = $_SESSION['usrmsg'];
+            echo "<div class=\"msg\"><p class=\"msg\">$message</p>
+            <span class=\"material-symbols-outlined font14 inline\" onclick=\"window.location.reload();\">
+                    close
+                    </span>
+            </div>";
+            unset($_SESSION['usrmsg']);
+        }
+    ?>
 </nav>

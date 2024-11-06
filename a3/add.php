@@ -13,6 +13,11 @@ require("include/db_connect.inc");
 <body>
     <?php
     require("include/nav.inc");
+    
+    if(!isset($_SESSION['loginCheck'])) {
+        $_SESSION['usrmsg'] = "Error! You must be logged in to access the add more page!";
+        header("Location:index.php");    
+    }
     ?>
 
     <header>
