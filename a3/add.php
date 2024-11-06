@@ -23,12 +23,14 @@ require("include/db_connect.inc");
         <p class="centertext">You can add a new pet here</p>
 
         <form name="petinput" action=formlanding.php method="POST" enctype="multipart/form-data">
-            <div class="tooltip"><label for="name">Pet Name:</label>
+        <label for="name">Pet Name:</label>    
+        <div class="tooltip">
                 <span class="tooltiptext">Enter pet name</span>
             </div> <br>
             <input type="text" id="name" name="name" placeholder="Provide a name for the pet" class="inputwidth"><br>
 
-            <div class="tooltip"><label for="type">Type:</label>
+            <label for="type">Type:</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Select type from list</span>
             </div><br>
             <select name="type" id="type" class="inputwidth">
@@ -39,31 +41,36 @@ require("include/db_connect.inc");
                 <option value="other">Other</option>
             </select><br>
 
-            <div class="tooltip"><label for="description">Description</label>
+            <label for="description">Description</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Enter a description of the pet</span>
             </div><br>
             <textarea id="description" name="description" class="inputwidth"
                 placeholder="Describe the pet briefly"></textarea><br>
 
-            <div class="tooltip"><label for="img">Select an Image:</label>
+            <label for="img">Select an Image:</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Select an image of the pet</span>
             </div>
             <input type="file" id="img" name="img" accept="image/*"><span class="maxsizewarn">Max image size:
                 500px</span><br>
 
-            <div class="tooltip"><label for="caption">Image Caption:</label>
+                <label for="caption">Image Caption:</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Enter a caption for the uploaded image</span>
             </div><br>
             <input type="text" id="caption" name="caption" placeholder="Describe the image in one word"
                 class="inputwidth"><br>
 
-            <div class="tooltip"><label for="ageMonths">Age (months):</label>
+                <label for="ageMonths">Age (months):</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Enter the age of the pet in months</span>
             </div><br>
             <input type="number" id="ageMonths" name="ageMonths" placeholder="Age of a pet in months"
                 class="inputwidth"><br>
 
-            <div class="tooltip"><label for="location">Location:</label>
+                <label for="location">Location:</label>
+            <div class="tooltip">
                 <span class="tooltiptext">Enter the location of the pet</span>
             </div><br>
             <input type="text" id="location" name="location" placeholder="Location of the pet"
