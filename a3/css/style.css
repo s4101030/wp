@@ -178,7 +178,7 @@ p.msg {
     margin-left: 50px;
     display:inline-block;
     width: 1000px;
-    margin-right: 950px;
+    /* margin-right: 950px; */
 }
 
 .inline {
