@@ -44,9 +44,9 @@ require("include/header.inc"); ?>
         unlink("images/$image");
         // echo "image deleted<br>";
 
-        $sql = "DELETE FROM pets WHERE petid=$id";
+        $stmt = $conn->prepare("DELETE FROM pets WHERE petid=?");
+        $stmt->bind_param("i", $id);
 
-        $stmt = $conn->prepare($sql);
         $stmt->execute();
         // echo "sql executed<br>";
 
