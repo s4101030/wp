@@ -123,7 +123,7 @@ table.gallery {
 }
 
 div.detail {
-    width: 300px;
+    width: 100px;
 }
 
 /* td {    border: 1px solid;
@@ -177,6 +177,7 @@ div.navdiv {
 p.msg {
     margin-left: 50px;
     display:inline-block;
+    width: 1000px;
     margin-right: 950px;
 }
 
@@ -197,6 +198,12 @@ div.msg {
     border-radius: 15px 15px 15px 15px;
     vertical-align: middle;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 .vert10 {    display: inline-block;
 margin-top: 15px;}
@@ -475,6 +482,8 @@ input.seperation {
 /* https://www.w3schools.com/css/css_tooltip.asp */
 
 .detailimage {
+    float: left; 
+    margin-right: 300px;
     height: 240px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -484,4 +493,31 @@ input.seperation {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+button.edit {    
+    background-color: #196efd;
+    color: white;
+    border-style: hidden;
+    border-radius: 10%;
+    font-family: "Ysabeau SC", sans-serif;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+}
+button.delete {
+    background-color: #dc3445;
+    color: white;
+    border-radius: 10%;
+    border-style: hidden;
+    font-family: "Ysabeau SC", sans-serif;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
 }

@@ -34,12 +34,22 @@ require("include/db_connect.inc");
 ?>
 
     <header>
-        <div class="centercontent">
-            <?php
-            print "<img alt=\"Image of the pet\" src=\"images/$image\" class=\"detailimage\">";
-            ?>
+        <div class="clearfix">
+
+            <!-- <div class="centercontent"> -->
+                <?php
+                print "<img alt=\"Image of the pet\" src=\"images/$image\" class=\"detailimage\">";
+                ?>
+            <!-- </div> -->
+            <div class="">
+                <?php
+                print "<h3>$name</h3>";
+                print "<p>$description</p>";
+                ?>
+            </div>
         </div>
-        <div class="centercontent">
+
+        <div class="flex">
 
             <br>
             <div class="centertext detail">
@@ -65,12 +75,17 @@ require("include/db_connect.inc");
     </header>
 
     <main>
-        <div class="centertext">
-            <?php
-            print "<h3 class=\"centertext\">$name</h3>";
-            print "<p>$description</p>";
-            ?>
-        </div>
+
+    <?php
+        if(isset($_SESSION['loginCheck'])) {
+            echo "<button class=\"edit\" onclick=\"toEdit()\">Edit</button>";
+            echo "<button class=\"delete\" onclick=\"confirmRedirect()\">Delete</button>";
+        }
+        else {
+            echo "<p>Log in to edit or delete records</p>";
+        }
+    ?>
+
     </main>
 
     <?php
