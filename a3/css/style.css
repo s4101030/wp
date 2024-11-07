@@ -110,6 +110,19 @@ img.gallery {
 
 }
 
+img.editing {
+    /* height: 100px; */
+    margin-bottom: 3px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.bottommargin0 {
+    margin-bottom: 0;
+}
+
 table.pets {
     border: 1px solid black;
     border-collapse: collapse;
