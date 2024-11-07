@@ -10,7 +10,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 else {
     $servername = "talsprddb02.int.its.rmit.edu.au";
     $username = "s4101030";
-    $password = "s19q17l12";
+    $password = "fothmine1";
     $dbname = "s4101030";
 }
 
