@@ -15,7 +15,7 @@
 //     }
 // }
 
-function confirmRedirect() {
+function confirmRedirect(id) {
     if (confirm("Are you sure you want to delete this record?")) {
         var form = document.createElement("form");
         form.method = "POST";
@@ -30,7 +30,7 @@ function confirmRedirect() {
         var input1 = document.createElement("input");
         input1.type = "hidden";
         input1.name = "petId";
-        input1.value = urlParams.get("id");
+        input1.value = id;
         form.appendChild(input1);
 
         document.body.appendChild(form);
@@ -38,7 +38,7 @@ function confirmRedirect() {
     }
 }
 
-function toEdit() {
+function toEdit(id) {
     if (confirm("Are you sure you want to edit this record?")) {
         var form = document.createElement("form");
         form.method = "POST";
@@ -53,7 +53,7 @@ function toEdit() {
         var input1 = document.createElement("input");
         input1.type = "hidden";
         input1.name = "petId";
-        input1.value = urlParams.get("id");
+        input1.value = id;
         form.appendChild(input1);
 
         document.body.appendChild(form);

@@ -78,8 +78,8 @@ require("include/db_connect.inc");
 
     <?php
         if(isset($_SESSION['loginCheck'])) {
-            echo "<button class=\"edit\" onclick=\"toEdit()\">Edit</button>";
-            echo "<button class=\"delete\" onclick=\"confirmRedirect()\">Delete</button>";
+            echo "<button class=\"edit\" onclick=\"toEdit($id)\">Edit</button>";
+            echo "<button class=\"delete\" onclick=\"confirmRedirect($id)\">Delete</button>";
         }
         else {
             echo "<p>Log in to edit or delete records</p>";

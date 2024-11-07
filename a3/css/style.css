@@ -1,10 +1,10 @@
 /* If you are reading this I can only apologise for what you're about to see, this is my first time using CSS */
 
 body {
-    /* width: 1200px; */
+    width: 1200px;
     margin: auto;
-    margin-left: 12.335px;
-    margin-right: 12.335px;
+    /* margin-left: 12.335px;
+    margin-right: 12.335px; */
     height: 100%;
     min-height: 100%;
     display: flex;
@@ -154,6 +154,11 @@ a.normal {
     color: #71b1b1;
     font-weight: bold;
     margin-right: 20px;
+}
+
+a.user {
+    color: #008080;
+    text-decoration: underline;
 }
 
 a.selected {
@@ -498,6 +503,14 @@ input.seperation {
     float: left; 
     margin-right: 300px;
     height: 240px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.userimage {
+    float: left; 
+    margin-right: 300px;
+    width: 300px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
