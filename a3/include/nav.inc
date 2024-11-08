@@ -65,7 +65,7 @@
     if (isset($_SESSION['usrmsg'])) {
         $message = $_SESSION['usrmsg'];
         echo "<div class=\"msg\"><p class=\"msg\">$message</p>
-            <span class=\"material-symbols-outlined font14 inline\" onclick=\"window.location.reload();\">
+            <span class=\"material-symbols-outlined font14 inline marginsearch\" onclick=\"window.location.reload();\">
                     close
                     </span>
             </div>";

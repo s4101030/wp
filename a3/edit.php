@@ -128,6 +128,7 @@ require("include/db_connect.inc");
             </div>
             <?php
                 echo "<input type=\"hidden\" name=\"petId\" value=\"$id\">";
+                $stmt->close();
             ?>
         </form>
         <br>

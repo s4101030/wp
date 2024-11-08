@@ -33,10 +33,6 @@ require("include/header.inc"); ?>
           <option value="butterfly">Butterfly</option>
           <option value="other">Other</option>
         </select>
-        </span>
-        <!-- <span onclick="search.submit()" class="material-symbols-outlined topmargin10 black marginleft borderaround">
-          search
-        </span> -->
         <button class="bluebg edit" onclick="search.submit()">Search</button>
       </div>
     </form>

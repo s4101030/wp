@@ -52,6 +52,7 @@ require("include/db_connect.inc");
                 } 
                 else {
                     if (hash_equals($passhash, hash('sha1', $_POST['password']))) {
+                        if(session_status() == PHP_SESSION_ACTIVE) {session_destroy();}
                         session_start();
                     $_SESSION['usrmsg'] = "Login successful";
                     $_SESSION['username'] = $_POST["username"];

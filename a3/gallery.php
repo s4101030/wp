@@ -74,7 +74,7 @@ require("include/header.inc"); ?>
 
                 print <<<AAA
                         <td>
-                            <div class="gallerydiv" data-type="$type" id="gallerydiv">
+                            <div class="gallerydiv" data-type="$type">
                                 <div class="container">
                                     <img class="gallery image" src="images/$image" alt="">
                                     <div class="middle">

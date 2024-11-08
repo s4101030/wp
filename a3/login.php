@@ -25,10 +25,10 @@ require("include/header.inc"); ?>
         <form name="loginInput" action="loginlanding.php" method="post">
             <div class="register">
 
-                <label for="name">Username:</label><br>
+                <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username" placeholder="Name" class="registerwidth" required><br>
 
-                <label for="name">Password:</label><br>
+                <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password" placeholder="" class="registerwidth" required><br>
             </div>
             <br>

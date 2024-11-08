@@ -19,7 +19,7 @@ function confirmRedirect(id) {
     if (confirm("Are you sure you want to delete this record?")) {
         var form = document.createElement("form");
         form.method = "POST";
-        form.action = "deletelanding.php"
+        form.action = "delete.php"
 
         const params = {};
         const queryString = window.location.search; // Get the query string part of the URL (e.g., ?key=value&anotherKey=anotherValue)
@@ -62,7 +62,7 @@ function toEdit(id) {
 }
 
 function hideall() {
-    var hideall = document.querySelectorAll("[id='gallerydiv']");
+    var hideall = document.getElementsByClassName("gallerydiv");
     // console.log(hideall)
 
     for (var i = 0; i < hideall.length; i++) {
@@ -94,7 +94,7 @@ function showneeded(selectedValue) {
 }
 
 function showall() {
-    var hideall = document.querySelectorAll("[id='gallerydiv']");
+    var hideall = document.getElementsByClassName("gallerydiv");
     // console.log(hideall)
 
     for (var i = 0; i < hideall.length; i++) {

@@ -16,7 +16,6 @@ require("include/db_connect.inc"); // placed here to show connection issues on l
   ?>
 
   <header>
-    <h1 class="index">
 
       <!-- <img src="images/dog4.jpeg" alt="Main image" class="frontimage main"> -->
       <div id="carouselExample" class="carousel slide carouselWidth">
@@ -69,6 +68,7 @@ AAA;
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <h1 class="index">
 
       PETS VICTORIA
     </h1>
@@ -90,10 +90,6 @@ AAA;
           <option value="butterfly">Butterfly</option>
           <option value="other">Other</option>
         </select>
-        </span>
-        <!-- <span onclick="search.submit()" class="material-symbols-outlined topmargin10 black marginleft borderaround">
-          search
-        </span> -->
         <button class="bluebg edit" onclick="search.submit()">Search</button>
       </div>
     </form>
