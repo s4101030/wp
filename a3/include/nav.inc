@@ -1,6 +1,12 @@
 <!-- nav.inc -->
 <nav>
-    <div class="navdiv">
+    <?php
+        echo "<div class=\"navdiv";
+        if (basename($_SERVER['PHP_SELF']) == "index.php") {
+            echo " width1200";
+        }
+        echo "\">";
+    ?>
         <!-- Nav & Header rearranged & header used as the main content title under teacher consult -->
         <img src="images/logo.png" alt="Logo" class="logo">
         <!-- <select name="navigation" id="navigation" onchange="dropdownDirect()">

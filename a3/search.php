@@ -22,23 +22,25 @@ require("include/header.inc"); ?>
         <p class="centertext">Search for pet based on text in the name or description, and/or by type</p>
 
         <form name="search" action="search.php" method="post">
-            <div class="centercontent bottommargin10">
-                <input type="text" id="term" name="term" placeholder="Term to search for">
-                <!-- <input type="password" id="type" name="type" placeholder="" class="registerwidth"><br> -->
-                <select name="type" id="type" class="matchinput">
-                    <option value="" selected disabled hidden>Type to search for</option>
-                    <option value="">All types</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="butterfly">Butterfly</option>
-                    <option value="other">Other</option>
-                </select>
-                </span>
-                <span onclick="search.submit()" class="material-symbols-outlined topmargin10 black marginleft borderaround">
-                    search
-                </span>
-            </div>
-        </form>
+      <div class="centercontent bottommargin10">
+        <input type="text" id="term" name="term" class="termsearch" placeholder="Term to search for ...">
+        <!-- <input type="password" id="type" name="type" placeholder="" class="registerwidth"><br> -->
+        <select name="type" id="type" class="matchinput">
+          <option value="" selected disabled hidden>Pet type</option>
+          <option value="">All types</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="butterfly">Butterfly</option>
+          <option value="other">Other</option>
+        </select>
+        </span>
+        <!-- <span onclick="search.submit()" class="material-symbols-outlined topmargin10 black marginleft borderaround">
+          search
+        </span> -->
+        <button class="bluebg edit" onclick="search.submit()">Search</button>
+      </div>
+    </form>
+
 
         <table class="gallery">
             <?php

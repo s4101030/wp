@@ -17,6 +17,17 @@ html {
     height: 100%;
 }
 
+.bluebg {
+    background-color: #008080 !important;
+}
+
+.width1200 {
+    margin-left: 12.335px;
+    margin-right: 12.335px;
+    /* margin-left: 24.67px;
+    margin-right: 24.67px; */
+}
+
 main {
     flex-grow: 1;
 }
@@ -32,7 +43,9 @@ footer {
 }
 
 body.index {
-    background-color: #fcf9ec
+    width: 100%;
+    /* background-color: white; */
+    background-color: #fcf9ec;
 }
 
 .centertext {
@@ -274,6 +287,7 @@ h2 {
 h2.index {
     color: #008080;
     font-size: 55px;
+    margin-bottom: 150px;
 }
 
 h3 {
@@ -529,7 +543,7 @@ button.edit {
     background-color: #196efd;
     color: white;
     border-style: hidden;
-    border-radius: 10%;
+    border-radius: 5px;
     font-family: "Ysabeau SC", sans-serif;
     padding: 5px;
     padding-left: 10px;
@@ -552,6 +566,19 @@ select.matchinput {
     height: 30px;
     margin-left: 10px;
     margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: grey;
+    font-family: "Ysabeau SC", sans-serif;
+    width: 300px;
+}
+input.termsearch {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: grey;
+    font-family: "Ysabeau SC", sans-serif;
+    width: 650px;
 }
 
 .borderaround {
@@ -571,4 +598,20 @@ select.matchinput {
     
     margin-top: 4px;
     margin-right: 0px;
+}
+
+.mainwhite {
+    background-color: white;
+}
+
+div.indextext {
+    width: 1050px;
+    margin-bottom: 20px;
+}
+h3.indextext {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+p.indextext {
+    font-size: 14px;
 }
