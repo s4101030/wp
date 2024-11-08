@@ -24,41 +24,57 @@ require("include/header.inc"); ?>
             difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation.
             But, until every pet is safe, respected, and loved, we all
             still have big, hairy work to do.</p>
+        <div class="centercontent">
+            <select name="type" id="typeselector" class="matchinput" onchange="typeselect()">
+                <option value="" selected disabled hidden>Pet type</option>
+                <option value="">All types</option>
+                <?php
+                $typesarray = mysqli_query($conn, "SELECT DISTINCT type FROM `pets`");
+                while ($rowtypes = mysqli_fetch_array($typesarray)) {
+                    $typeinst = $rowtypes['type'];
+                    $typeinstUp = ucfirst($typeinst);
+                    print "<option value=\"$typeinst\">$typeinstUp</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <br>
 
         <table class="gallery">
             <?php
-                // get row in table
-                // modulus 3
-                // subtract modulus from total
-                // total is number of full rows
-                // modulus must be one or two
-                // therefore if there is a modulus there must be a minimum of one, and an if for the two
-                
-                $table = mysqli_query($conn, "select * from pets");
-                
-                $totalrows = mysqli_num_rows($table);
-                $remainder = $totalrows % 3;
-                $fullrows = $totalrows - $remainder;
+            // get row in table
+            // modulus 3
+            // subtract modulus from total
+            // total is number of full rows
+            // modulus must be one or two
+            // therefore if there is a modulus there must be a minimum of one, and an if for the two            
 
-                $num = 0;
-                $closed = true;
-                while ($row = mysqli_fetch_array($table)) {
-                    
-                    $num++;
-                    if ($closed) {
-                        print "<tr>";
-                        $closed = false;
-                    }
+            $table = mysqli_query($conn, "select * from pets");
 
-                    // if ($fullrows < $num+1){}   
-                    $image = $row['image'];
-                    $name = $row['petname'];
-                    $id = $row['petid'];
-                    
+            $totalrows = mysqli_num_rows($table);
+            $remainder = $totalrows % 3;
+            $fullrows = $totalrows - $remainder;
 
-                    print <<<AAA
+            $num = 0;
+            $closed = true;
+            while ($row = mysqli_fetch_array($table)) {
+
+                $num++;
+                if ($closed) {
+                    print "<tr>";
+                    $closed = false;
+                }
+
+                // if ($fullrows < $num+1){}   
+                $image = $row['image'];
+                $name = $row['petname'];
+                $id = $row['petid'];
+                $type = $row['type'];
+
+
+                print <<<AAA
                         <td>
-                            <div class="gallerydiv">
+                            <div class="gallerydiv" data-type="$type" id="gallerydiv">
                                 <div class="container">
                                     <img class="gallery image" src="images/$image" alt="">
                                     <div class="middle">
@@ -71,13 +87,13 @@ require("include/header.inc"); ?>
                             </div>
                         </td>
                     AAA;
-                    
 
-                    if ($num % 3 == 0 || $num == $totalrows) {
-                        print "</tr>";
-                        $closed = true;
-                    }
+
+                if ($num % 3 == 0 || $num == $totalrows) {
+                    print "</tr>";
+                    $closed = true;
                 }
+            }
             ?>
         </table>
     </main>

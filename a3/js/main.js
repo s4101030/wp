@@ -57,6 +57,68 @@ function toEdit(id) {
         form.appendChild(input1);
 
         document.body.appendChild(form);
-        form.submit();    
+        form.submit();
+    }
+}
+
+function hideall() {
+    var hideall = document.querySelectorAll("[id='gallerydiv']");
+    // console.log(hideall)
+
+    for (var i = 0; i < hideall.length; i++) {
+        // hideall[i].style.visibility = 'hidden';
+        hideall[i].style.display = 'none';
+    }
+}
+
+function showneeded(selectedValue) {
+    var selection = "[data-type=\"" + selectedValue + "\"]";
+
+    // console.log(selection);
+
+    var hideall = document.querySelectorAll("[id='gallerydiv']");
+    // console.log(hideall)
+
+    for (var i = 0; i < hideall.length; i++) {
+        // hideall[i].style.visibility = 'hidden';
+        hideall[i].style.display = 'none';
+    }
+
+    var showthese = document.querySelectorAll(selection)
+    // console.log(showthese)
+    for (var i = 0; i < showthese.length; i++) {
+        // showthese[i].style.visibility = 'visible';
+        // showthese[i].style.display = 'block';
+        showthese[i].style.setProperty('display', 'block', 'important');
+    }
+}
+
+function showall() {
+    var hideall = document.querySelectorAll("[id='gallerydiv']");
+    // console.log(hideall)
+
+    for (var i = 0; i < hideall.length; i++) {
+        // hideall[i].style.visibility = 'visible';
+        hideall[i].style.display = 'block';
+        // hideall[i].style.setProperty('visibility', 'visible', 'important');
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+function typeselect() {
+    const selectedValue = document.getElementById("typeselector").value;
+
+    // console.log(selectedValue);
+
+    if (selectedValue != "") {
+        hideall();
+        sleep(50000)
+        showneeded(selectedValue);
+    }
+    else {
+        showall();
     }
 }
