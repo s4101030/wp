@@ -11,59 +11,59 @@
             <option value="gallery">Gallery</option>
         </select>  -->
         <span class="vert10">
-        
-<?php
-$navElementsCommon = array(
-    "Home"=>"index.php", 
-    "Pets"=>"pets.php", 
-    "Gallery"=>"gallery.php"
-);
-$navElementsLoggedOut = array(
-    "Register"=>"register.php",
-    "Login"=>"login.php"
-);
-$navElementsLoggedIn = array(
-    "Add more"=>"add.php",
-    "Logout"=>"logout.php"
-);
 
-    session_start();
-    if(isset($_SESSION['loginCheck'])) {
-        $navElements = array_merge($navElementsCommon, $navElementsLoggedIn);
-    }
-    else {
-        $navElements = array_merge($navElementsCommon, $navElementsLoggedOut);
-    }
+            <?php
+            $navElementsCommon = array(
+                "Home" => "index.php",
+                "Pets" => "pets.php",
+                "Gallery" => "gallery.php"
+            );
+            $navElementsLoggedOut = array(
+                "Register" => "register.php",
+                "Login" => "login.php"
+            );
+            $navElementsLoggedIn = array(
+                "Add more" => "add.php",
+                "Logout" => "logout.php"
+            );
 
-    foreach ($navElements as $key => $value) {
-        if (basename($_SERVER['PHP_SELF']) == $value) {
-            $style = "selected";
-        }
-        else {
-            $style = "normal";
-        }
-        
-        print "<a href=\"$value\" class=\"$style\">$key</a>";
-    }
-?>   
-    </span>   
-        <div class="inlineSearch">
-        <input class="right" type="text" placeholder="Search">
-        <span class="material-symbols-outlined topmargin10 white marginleft">
-            search
+            session_start();
+            if (isset($_SESSION['loginCheck'])) {
+                $navElements = array_merge($navElementsCommon, $navElementsLoggedIn);
+            } else {
+                $navElements = array_merge($navElementsCommon, $navElementsLoggedOut);
+            }
+
+            foreach ($navElements as $key => $value) {
+                if (basename($_SERVER['PHP_SELF']) == $value) {
+                    $style = "selected";
+                } else {
+                    $style = "normal";
+                }
+
+                print "<a href=\"$value\" class=\"$style\">$key</a>";
+            }
+            ?>
         </span>
-        </div>
+        <form name="navsearch" action="search.php" method="post" class="inline">
+            <div class="inlineSearch">
+                <input class="right" type="text" name="term" placeholder="Search">
+                <span onclick="navsearch.submit()" class="material-symbols-outlined topmargin10 white marginleft">
+                    search
+                </span>
+            </div>
+        </form>
     </div>
 
     <?php
-        if (isset($_SESSION['usrmsg'])) {
-            $message = $_SESSION['usrmsg'];
-            echo "<div class=\"msg\"><p class=\"msg\">$message</p>
+    if (isset($_SESSION['usrmsg'])) {
+        $message = $_SESSION['usrmsg'];
+        echo "<div class=\"msg\"><p class=\"msg\">$message</p>
             <span class=\"material-symbols-outlined font14 inline\" onclick=\"window.location.reload();\">
                     close
                     </span>
             </div>";
-            unset($_SESSION['usrmsg']);
-        }
+        unset($_SESSION['usrmsg']);
+    }
     ?>
 </nav>

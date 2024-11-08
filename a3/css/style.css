@@ -547,3 +547,28 @@ button.delete {
     padding-right: 10px;
     margin: 5px;
 }
+
+select.matchinput {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.borderaround {
+    /* border-radius: 5%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    display: inline-block; */
+    margin-bottom: 10px;
+}
+
+.bottommargin10 {
+    margin-bottom: 20px;
+}
+
+.inline {
+    display: inline !important;
+    
+    margin-top: 4px;
+    margin-right: 0px;
+}
